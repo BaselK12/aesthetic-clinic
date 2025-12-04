@@ -1,73 +1,10 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Dr. George Karkabi - Aesthetic Clinic Landing PageA modern, high-performance landing page for an aesthetic clinic located in Haifa. This project focuses on a "fluid" design philosophy ("vibe code") using minimal grids, glassmorphism effects, and elegant typography.(You can replace this link with a screenshot of your actual site later)✨ FeaturesResponsive Design: Fully fluid layout that works on mobile, tablet, and desktop.Modern UI: Glassmorphism navigation, smooth scroll animations, and Tailwind CSS styling.Direct Integration:WhatsApp: Instant messaging button pre-filled with appointment details.Waze: One-click navigation to the clinic location.Email: Functional contact form using native mailto (no backend required).Treatments Showcase: Elegant grid display for Botox, Sculptra, PRP, etc.🛠️ Tech StackFramework: React (via Vite)Language: TypeScriptStyling: Tailwind CSS v4Icons: Lucide React🚀 Getting StartedFollow these steps to run the project locally on your machine.PrerequisitesMake sure you have Node.js installed.InstallationClone the repositorygit clone [https://github.com/YOUR_USERNAME/aesthetic-clinic.git](https://github.com/YOUR_USERNAME/aesthetic-clinic.git)
+cd aesthetic-clinic
+Install dependenciesnpm install
+Start the development servernpm run dev
+Open your browser and visit http://localhost:5173.⚙️ ConfigurationYou can easily update contact details and social links directly in src/App.tsx. Look for the configuration block at the top of the component:// LINKS CONFIGURATION
+const INSTAGRAM_LINK = "[https://www.instagram.com/dr.georgekarkabi/](https://www.instagram.com/dr.georgekarkabi/)";
+const FACEBOOK_LINK = "[https://www.facebook.com](https://www.facebook.com)"; 
+const WAZE_LINK = "[https://waze.com/ul?q=Herzliya+24+Haifa](https://waze.com/ul?q=Herzliya+24+Haifa)";
+📦 DeploymentThis project is optimized for static deployment.Build for production:npm run build
+The output will be in the dist folder, which can be dragged and dropped into Netlify or automatically deployed via Vercel.📄 License© 2025 Dr. George Karkabi Aesthetics. All rights reserved.
