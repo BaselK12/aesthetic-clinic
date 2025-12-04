@@ -1,89 +1,161 @@
-Dr. George Karkabi - Aesthetic Clinic Landing Page
+# **Aesthetic Clinic Website – Veloura**
 
-A modern, high-performance landing page for an aesthetic clinic located in Haifa. This project focuses on a "fluid" design philosophy ("vibe code") using minimal grids, glassmorphism effects, and elegant typography.
+A modern, elegant, and responsive website built for an aesthetic clinic.  
+Designed to showcase treatments, highlight the clinic brand, and give users a smooth browsing experience across all devices.
 
-(You can replace this link with a screenshot of your actual site later)
+This project demonstrates clean UI design, structured HTML/CSS, and simple modular JavaScript.
 
-✨ Features
+---
 
-Responsive Design: Fully fluid layout that works on mobile, tablet, and desktop.
+## 🌸 **Features**
 
-Modern UI: Glassmorphism navigation, smooth scroll animations, and Tailwind CSS styling.
+### **✨ Modern UI**
+- Warm, premium color palette  
+- Mobile-friendly layout  
+- Smooth transitions and clean typography  
 
-Direct Integration:
+### **💉 Treatment Menu**
+- Left-side menu with clickable categories  
+- Right-side panel displaying treatment details  
+- Animations for better user experience  
 
-WhatsApp: Instant messaging button pre-filled with appointment details.
+### **⚡ Lightweight**
+- Pure **HTML + CSS + JavaScript**  
+- No external dependencies  
+- Loads instantly even on slow devices  
 
-Waze: One-click navigation to the clinic location.
+### **🎨 Easy Customization**
+- Global CSS variables for colors, spacing, and style  
+- Simple structure for adding new treatments  
+- Replaceable images in the `assets/images` directory  
 
-Email: Functional contact form using native mailto (no backend required).
+---
 
-Treatments Showcase: Elegant grid display for Botox, Sculptra, PRP, etc.
+## 📁 **Project Structure**
 
-🛠️ Tech Stack
+```
+aesthetic-clinic/
+│
+├── assets/
+│   ├── images/
+│   └── icons/
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── index.html
+└── README.md
+```
 
-Framework: React (via Vite)
+---
 
-Language: TypeScript
+## 🚀 **Getting Started**
 
-Styling: Tailwind CSS v4
-
-Icons: Lucide React
-
-🚀 Getting Started
-
-Follow these steps to run the project locally on your machine.
-
-Prerequisites
-
-Make sure you have Node.js installed.
-
-Installation
-
-Clone the repository
-
-git clone [https://github.com/YOUR_USERNAME/aesthetic-clinic.git](https://github.com/YOUR_USERNAME/aesthetic-clinic.git)
+### **1. Clone the Repo**
+```bash
+git clone https://github.com/BaselK12/aesthetic-clinic.git
 cd aesthetic-clinic
+```
 
+### **2. Run Locally**
 
+#### **Option A: VS Code Live Server**
+1. Install "Live Server" extension  
+2. Right-click `index.html`  
+3. Click **Open with Live Server**
 
-Install dependencies
+#### **Option B: Python Local Server**
+```bash
+python3 -m http.server 8080
+```
+Open in your browser:
+```
+http://localhost:8080
+```
 
-npm install
+---
 
+## 🎛️ **Customization Guide**
 
+### **Colors & Theme**
+Edit variables in `css/style.css`:
 
-Start the development server
+```css
+:root {
+  --bg: #8b776b;
+  --panel: #f7f4f1;
+  --ink: #2b1d18;
+  --accent: #c2a58f;
+}
+```
 
-npm run dev
+### **Treatments**
+Located inside `index.html`.  
+Each treatment block looks like:
 
+```html
+<li data-target="botox">Botox</li>
 
+<div id="botox" class="panel active">
+  <h2>Botox Treatment</h2>
+  <p>Short description…</p>
+</div>
+```
 
-Open your browser and visit http://localhost:5173.
+Duplicate/edit as needed.
 
-⚙️ Configuration
+### **Images**
+Add your own files to:
+```
+assets/images/
+```
+Update the references in HTML or CSS.
 
-You can easily update contact details and social links directly in src/App.tsx. Look for the configuration block at the top of the component:
+---
 
-// LINKS CONFIGURATION
-const INSTAGRAM_LINK = "[https://www.instagram.com/dr.georgekarkabi/](https://www.instagram.com/dr.georgekarkabi/)";
-const FACEBOOK_LINK = "[https://www.facebook.com](https://www.facebook.com)"; 
-const WAZE_LINK = "[https://waze.com/ul?q=Herzliya+24+Haifa](https://waze.com/ul?q=Herzliya+24+Haifa)";
+## 📦 **Deployment**
 
+### **GitHub Pages**
+1. Push repo to GitHub  
+2. Go to **Settings → Pages**  
+3. Deploy from `main` branch  
+4. Your website goes live automatically  
 
+### **Netlify**
+- Drag & drop project folder into https://app.netlify.com/drop  
 
-📦 Deployment
+### **Vercel**
+```bash
+vercel deploy
+```
 
-This project is optimized for static deployment.
+---
 
-Build for production:
+## 🧰 **Tech Stack**
+- **HTML5**
+- **CSS3**
+- **Vanilla JavaScript**
 
-npm run build
+---
 
+## 📝 **Future Improvements**
+- Online appointment booking  
+- SEO enhancements  
+- Dedicated treatment pages  
+- Multi-language support  
+- CMS panel for easy updates  
 
+---
 
-The output will be in the dist folder, which can be dragged and dropped into Netlify or automatically deployed via Vercel.
+## 📍 **Author**
+**Basel Karkabee**  
+GitHub: [BaselK12](https://github.com/BaselK12)
 
-📄 License
+---
 
-© 2025 Dr. George Karkabi Aesthetics. All rights reserved.
+## 📜 **License**
+This project is open-source for educational and small-business use.  
+Feel free to modify and adapt it.
