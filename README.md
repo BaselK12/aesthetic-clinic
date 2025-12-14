@@ -1,73 +1,161 @@
-# React + TypeScript + Vite
+# **Aesthetic Clinic Website – Veloura**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, elegant, and responsive website built for an aesthetic clinic.  
+Designed to showcase treatments, highlight the clinic brand, and give users a smooth browsing experience across all devices.
 
-Currently, two official plugins are available:
+This project demonstrates clean UI design, structured HTML/CSS, and simple modular JavaScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌸 **Features**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### **✨ Modern UI**
+- Warm, premium color palette  
+- Mobile-friendly layout  
+- Smooth transitions and clean typography  
 
-## Expanding the ESLint configuration
+### **💉 Treatment Menu**
+- Left-side menu with clickable categories  
+- Right-side panel displaying treatment details  
+- Animations for better user experience  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### **⚡ Lightweight**
+- Pure **HTML + CSS + JavaScript**  
+- No external dependencies  
+- Loads instantly even on slow devices  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### **🎨 Easy Customization**
+- Global CSS variables for colors, spacing, and style  
+- Simple structure for adding new treatments  
+- Replaceable images in the `assets/images` directory  
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 **Project Structure**
+
+```
+aesthetic-clinic/
+│
+├── assets/
+│   ├── images/
+│   └── icons/
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── index.html
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 **Getting Started**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### **1. Clone the Repo**
+```bash
+git clone https://github.com/BaselK12/aesthetic-clinic.git
+cd aesthetic-clinic
 ```
+
+### **2. Run Locally**
+
+#### **Option A: VS Code Live Server**
+1. Install "Live Server" extension  
+2. Right-click `index.html`  
+3. Click **Open with Live Server**
+
+#### **Option B: Python Local Server**
+```bash
+python3 -m http.server 8080
+```
+Open in your browser:
+```
+http://localhost:8080
+```
+
+---
+
+## 🎛️ **Customization Guide**
+
+### **Colors & Theme**
+Edit variables in `css/style.css`:
+
+```css
+:root {
+  --bg: #8b776b;
+  --panel: #f7f4f1;
+  --ink: #2b1d18;
+  --accent: #c2a58f;
+}
+```
+
+### **Treatments**
+Located inside `index.html`.  
+Each treatment block looks like:
+
+```html
+<li data-target="botox">Botox</li>
+
+<div id="botox" class="panel active">
+  <h2>Botox Treatment</h2>
+  <p>Short description…</p>
+</div>
+```
+
+Duplicate/edit as needed.
+
+### **Images**
+Add your own files to:
+```
+assets/images/
+```
+Update the references in HTML or CSS.
+
+---
+
+## 📦 **Deployment**
+
+### **GitHub Pages**
+1. Push repo to GitHub  
+2. Go to **Settings → Pages**  
+3. Deploy from `main` branch  
+4. Your website goes live automatically  
+
+### **Netlify**
+- Drag & drop project folder into https://app.netlify.com/drop  
+
+### **Vercel**
+```bash
+vercel deploy
+```
+
+---
+
+## 🧰 **Tech Stack**
+- **HTML5**
+- **CSS3**
+- **Vanilla JavaScript**
+
+---
+
+## 📝 **Future Improvements**
+- Online appointment booking  
+- SEO enhancements  
+- Dedicated treatment pages  
+- Multi-language support  
+- CMS panel for easy updates  
+
+---
+
+## 📍 **Author**
+**Basel Karkabee**  
+GitHub: [BaselK12](https://github.com/BaselK12)
+
+---
+
+## 📜 **License**
+This project is open-source for educational and small-business use.  
+Feel free to modify and adapt it.
