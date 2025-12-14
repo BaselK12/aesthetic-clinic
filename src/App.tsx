@@ -21,11 +21,7 @@ import {
 /**
  * DR. GEORGE KARKABI - AESTHETIC CLINIC
  * Updates:
- * 1. Phone number updated to 053 724 6693.
- * 2. Year updated to 2025.
- * 3. Instagram link fixed.
- * 4. Facebook link added (placeholder).
- * 5. Waze navigation added.
+ * 1. Replaced Doctor's image source to local file "/doctor.jpg"
  */
 
 const App = () => {
@@ -34,7 +30,7 @@ const App = () => {
 
   // LINKS CONFIGURATION
   const INSTAGRAM_LINK = "https://www.instagram.com/dr.georgekarkabi/";
-  const FACEBOOK_LINK = "https://www.facebook.com"; // Replace this with your actual Facebook link
+  const FACEBOOK_LINK = "https://www.facebook.com";
   const WAZE_LINK = "https://waze.com/ul?q=Herzliya+24+Haifa";
 
   // Form State
@@ -78,7 +74,6 @@ const App = () => {
   const handleWhatsApp = () => {
     const message = `Hello Dr. Karkabi, I would like to inquire about an appointment. \n\nName: ${formData.name} \nPhone: ${formData.phone}`;
     const encoded = encodeURIComponent(message);
-    // Updated number: 0537246693 -> 972537246693
     window.open(`https://wa.me/972537246693?text=${encoded}`, "_blank");
   };
 
@@ -368,8 +363,9 @@ const App = () => {
           <div className="flex flex-col md:flex-row items-center gap-16">
             <div className="w-full md:w-1/2 relative">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+                {/* UPDATED IMAGE SOURCE TO LOCAL FILE */}
                 <img
-                  src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=1000"
+                  src="/doctor.jpeg"
                   alt="Dr George Karkabi"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
